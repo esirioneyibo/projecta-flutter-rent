@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-//import 'HomeScreen.dart';
+import 'package:projecta/auth/auth.dart';
+import 'HomeScreen.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -115,11 +115,11 @@ class _LoginScreenState extends State<LoginScreen> {
                     color: Colors.pink,
                     child: Text("Login"),
                     onPressed: () {
-                      print("Login");
-                      /* Navigator.push(
+                      authService.googleSignIn();
+                      Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => HomeScreen()),
-                      ); */
+                      );
                     },
                     shape: new RoundedRectangleBorder(
                         borderRadius: new BorderRadius.circular(30.0))),
